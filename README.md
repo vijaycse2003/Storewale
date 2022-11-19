@@ -1,0 +1,1 @@
+# Storewale Django project
