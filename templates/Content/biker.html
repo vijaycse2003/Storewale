@@ -1,0 +1,236 @@
+{% extends '../index.html' %} 
+
+{% block title %} StoreRoom | Bike {% endblock title %} 
+
+{% block styles%}
+<style>
+ 
+   .carousel {
+     height:70vh;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     perspective: 100rem;
+     margin:30px 0px;
+   }
+   .carousel__cards {
+     position: relative;
+     width: 20rem;
+     height: 20rem;
+     transform-style: preserve-3d;
+     transform: translateZ(-25rem);
+     transition: transform 0.3s ease-in;
+   }
+   .carousel__img {
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     border-radius:20%;
+   }
+   .carousel__card {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     border-radius:20%;
+     font-size: 3em;
+     font-weight: 700;
+   }
+   .carousel__card:nth-child(1) {
+     transform: rotateY(0deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(2) {
+     transform: rotateY(45deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(3) {
+     transform: rotateY(90deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(4) {
+     transform: rotateY(135deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(5) {
+     transform: rotateY(180deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(6) {
+     transform: rotateY(225deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(7) {
+     transform: rotateY(270deg) translateZ(25rem);
+   }
+   .carousel__card:nth-child(8) {
+     transform: rotateY(315deg) translateZ(25rem);
+   }
+   .carousel__btn {
+     outline: none;
+     border: none;
+     border-radius: 0.2rem;
+     background: #00599c;
+     padding: 0.5em 1em;
+     font-size: 1.2em;
+     font-weight: 500;
+     color: #ffffff;
+     cursor: pointer;
+     margin: 0 2rem;
+     margin-top: 20px;
+   }
+   .carousel__btn:hover {
+     transform: scale(1.04);
+     background: #000000;
+   }
+   .carousel_body{
+    margin-top:15px;
+    text-align: center;
+   }
+   .carousel_body>h4{
+    font-size:1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:800;
+   }
+
+   .spec-section{
+  width: 95%;
+  padding:60px 30px;
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.8em;
+  text-align: center;
+  border-radius: 30px;
+    }
+    a{
+      text-decoration: none;
+    }
+    .set{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+        align-items: center;
+        text-align: center;
+        color:#6aff00;
+        font-weight:bold;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 10px;
+    }
+       
+     </style>
+
+     
+{% endblock styles%}
+  
+
+
+{% block content %} 
+   <div class="carousel">
+     <div class="carousel__cards">
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/393x221/n/cw/ec/103795/yzf-r15-right-front-three-quarter-12.jpeg?isig=0&q=75" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Yamaha MT10 V2</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/310x174/n/cw/ec/125053/s1000rr-left-side-view.gif?isig=0&q=80" alt="oops!!">
+              <div class="carousel_body">
+                <h4>BMW S1000 RR</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/310x174/n/cw/ec/129745/250-duke-left-front-three-quarter.gif?isig=0&q=80" alt="oops!!">
+              <div class="carousel_body">
+                <h4>KTM 250 Duke</h4>
+               
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/310x174/bw/models/yamaha-fz-x-standard20210618140055.jpg?q=80" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Yamaha FZ X</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/310x174/n/cw/ec/103795/yzf-r15-right-front-three-quarter-7.jpeg?isig=0&q=80" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Yamaha R15 V4</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/210x118/n/cw/ec/127127/xtreme-right-front-three-quarter-3.jpeg?isig=0&q=75" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Xtreme 160R</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/210x118/n/cw/ec/124645/pulsar-n160-right-front-three-quarter.jpeg?isig=0&q=75" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Pulsar 160</h4>
+              </div>
+       </div>
+       <div class="carousel__card">
+         <img class="carousel__img"
+              src="https://imgd.aeplcdn.com/310x174/n/cw/ec/124013/hunter-350-right-front-three-quarter.jpeg?isig=0&q=80" alt="oops!!">
+              <div class="carousel_body">
+                <h4>Royal Enfield Hunter 350</h4>
+              </div>
+       </div>
+   
+     </div>
+     <div class="carousel__control">
+       <button class="carousel__btn carousel__btn--back">&#8678; Prev</button>
+       <button class="carousel__btn carousel__btn--next">Next &#8680;</button>
+     </div>
+     <a href="{% url 'bikes'  %}" class="btn btn-primary" style="width:500px;">Bike collections</a>
+   </div>
+
+
+  
+    <div class="row mt-3">
+      <div class="col-lg-12 col-md-12 spec-section">
+        {% for item in company%}
+        <a href="{% url 'cobike' item.coname %}">
+        <div class="set">
+            <img src="{{item.cimage}}" alt="mostof" width="100" height="100">
+            <div class="inner-set">
+                <h3>{{item.coname}}</h3>
+            </div>
+          </div>
+        </a>
+          {% endfor %}
+    </div>
+    </div>
+
+    
+{% endblock content %}
+
+
+{% block scripts %} 
+
+<script>
+    const next = document.querySelector(".carousel__btn--next"),
+     back = document.querySelector(".carousel__btn--back"),
+     carousel = document.querySelector(".carousel__cards");
+   let angle = 0;
+   
+   next.addEventListener("click", () => {
+     angle -= 45;
+     carousel.style.transform = `translateZ(-25rem) rotateY(${angle}deg)`;
+   });
+   
+   back.addEventListener("click", () => {
+     angle += 45;
+     carousel.style.transform = `translateZ(-25rem) rotateY(${angle}deg)`;
+   });
+   
+       </script>
+{% endblock scripts %}
+
+
+

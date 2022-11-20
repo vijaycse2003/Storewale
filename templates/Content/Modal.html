@@ -1,0 +1,47 @@
+{% extends '../index.html' %} 
+
+{% block title %} StoreRoom | Bike Collections{% endblock title %} 
+
+
+
+{% block content %}
+
+
+<section class=" py-4 my-5">
+  <div class="container">
+      <div class="col-12">
+          <div class="row">
+            <nav aria-label="breadcrumb col-lg-5 mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <i class="fa fa-home"></i><a href="{% url 'home' %}">Home</a>
+                    </i>
+                            <li class="breadcrumb-item active" aria-current="page">
+                            Collections</i>
+                        </ol>
+                    </nav>
+              <h4 class="mb-3">Model  Storeroom</h4>
+              <hr style="border-color:#000;">
+            </div>
+            <div class="row">
+              {% for item in products %}
+              <div class="col-md-4 col-lg-4">
+                  <div class="card my-4  p-5" style="box-shadow:2px 2px 1px 4px #eee;"> <img src="{{ item.image }}" width="350" height="300"   alt="Categories">
+                  <a href="{% url 'bikes'  %}" style="text-decoration:none;">
+                      <div class="card-body">
+                          <h4 class="card-title text-center text-success">{{ item.name }}</h4>
+                          <div class="btn-group">
+                            <button class="btn btn-light fw-4" style="border:2px solid brown;width:300px">Collections details</button>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      {% endfor %}
+      </div>
+  </div>
+</div>
+</section>
+
+{% endblock content %}
+ 
